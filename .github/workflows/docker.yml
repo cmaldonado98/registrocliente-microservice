@@ -18,6 +18,9 @@ jobs:
           docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
 
       # Runs a single command using the runners shell
+      - name: maven build
+        run: |
+          mvn install
       - name: docker build
         run: |
           docker build . -t cmaldonado98/trainee-tcs:registropipeline
