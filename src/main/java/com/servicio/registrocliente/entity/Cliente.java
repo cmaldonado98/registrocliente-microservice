@@ -16,7 +16,7 @@ import javax.persistence.Id;
 public class Cliente {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long clienteId;
     private String nombreCliente;
     private String cedula;
