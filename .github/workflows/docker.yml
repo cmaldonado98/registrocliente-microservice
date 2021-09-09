@@ -27,3 +27,11 @@ jobs:
       - name: docker push
         run: |
           docker push cmaldonado98/trainee-tcs:registropipeline
+      - name: connect aws
+          run: |
+            chmod 400 Trainee-TCS.pem
+            ssh -i "Trainee-TCS.pem" ec2-user@ec2-34-227-98-168.compute-1.amazonaws.com
+      - name: delete container
+          run: |
+            docker stop registro
+
