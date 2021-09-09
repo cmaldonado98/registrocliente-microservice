@@ -30,8 +30,12 @@ jobs:
       - name: connect aws
           run: |
             chmod 400 Trainee-TCS.pem
+
+      - name: Conectar
+          run: |
             ssh -i "Trainee-TCS.pem" ec2-user@ec2-34-227-98-168.compute-1.amazonaws.com
-      - name: delete container
+      - name: Docker stop
           run: |
             docker stop registro
+
 
