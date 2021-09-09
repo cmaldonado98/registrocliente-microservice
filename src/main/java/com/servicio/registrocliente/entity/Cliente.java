@@ -22,5 +22,7 @@ public class Cliente {
     private String cedula;
     private String passwordCliente;
     private String direccionCliente;
+    private String emailCliente;
+    private String celularCliente;
 
 }
