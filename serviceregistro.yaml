@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: registro
+spec:
+  selector:
+    app: registro
+  ports:
+  - name: port
+    protocol: TCP
+    port: 4003
+    targetPort: 4003
+  type: LoadBalancer

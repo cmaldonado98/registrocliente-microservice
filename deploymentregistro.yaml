@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: registro
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: registro
+  template:
+    metadata:
+      labels:
+        app: registro
+    spec:
+      containers:
+        - name: registro
+          image: cmaldonado98/registro-microservice:IMAGE_LABEL
+          ports:
+            - containerPort: 4003       
+          imagePullPolicy: Always
